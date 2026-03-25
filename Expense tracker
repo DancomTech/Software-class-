@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Expense Tracker</h2>
+
+    <input type="text" id="desc" placeholder="Description">
+    <input type="number" id="amount" placeholder="Amount">
+
+    <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+
+    <button onclick="addTransaction()">Add</button>
+    <button onclick="clearAll()">Clear All</button>
+
+    <h3>Balance: ₦<span id="balance">0</span></h3>
+    <h3>Total Income: ₦<span id="totalIncome">0</span></h3>
+    <h3>Total Expense: ₦<span id="totalExpense">0</span></h3>
+
+    <ul id="list"></ul>
+
+    <canvas id="expenseChart" width="350" height="200"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
